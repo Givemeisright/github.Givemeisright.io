@@ -2,33 +2,35 @@ import NProgress from "nprogress";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Posts from "../views/Posts.vue";
+import Post from "../views/Post.vue";
+import About from "../views/About.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/dist",
     name: "Posts",
     component: Posts,
   },
   {
-    path: "/about",
+    path: "/dist/about",
     name: "About",
-    component: () => import("../views/About.vue"),
+    component: About,
   },
   {
-    path: "/post/:number",
+    path: "/dist/post/:number",
     name: "Post",
-    component: () => import("../views/Post.vue"),
+    component: Post,
   },
   {
     path: "*",
-    redirect: "/",
+    redirect: "/dist",
   },
 ];
 
 const router = new VueRouter({
-  base: "/vue-issue-blog",
+  base: "/github.Givemeisright.io",
   routes,
   mode: "history",
 });

@@ -14,11 +14,6 @@ const thirdPartySite = [
   },
   //Other sites ...
 ];
-const project = {
-  vueIssueBlog: {
-  },
-  reactIssueBlog: {
-  },
-};
+
 //  };
-export { githubRepo, thirdPartySite, project };
+export { githubRepo, thirdPartySite };
